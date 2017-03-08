@@ -29,9 +29,9 @@
 
 						<div class="panel-body">
 
-							<form action="Register" method="post">
+							<form action="LoginServlet" method="post">
 								<div class="form-group">
-									<label for="inputTxtUsername">User Name</label> 
+									<label for="inputTxtEmail">User Name</label> 
 									<input	type="text" class="form-control" name="txtUserName" id="txtUserName" placeholder="Enter User Name" required="required">
 								</div>
 								<div class="form-group">
@@ -45,19 +45,19 @@
 							      <div class="col-sm-10">
 							        <div class="form-check">
 							          <label class="form-check-label">
-							            <input class="form-check-input" type="radio" name="radioGender" id="radioGender1" value="Male" checked>
+							            <input class="form-check-input" type="radio" name="gender" id="radioGender1" value="Male" checked>
 							            Male							            
 							          </label>
 							        </div>
 							        <div class="form-check">
 							          <label class="form-check-label">
-							            <input class="form-check-input" type="radio" name="radioGender" id="radioGender2" value="Female">
+							            <input class="form-check-input" type="radio" name="gender" id="radioGender2" value="Female">
 							            Female
 							          </label>
 							        </div>
 							        <div class="form-check disabled">
 							          <label class="form-check-label">
-							            <input class="form-check-input" type="radio" name="radioGender" id="radioGender3" value="Confidential" disabled>
+							            <input class="form-check-input" type="radio" name="gender" id="radioGender3" value="Confidential" disabled>
 							            Confidential
 							          </label>
 							        </div>
@@ -65,21 +65,21 @@
 							    </fieldset>
 							    
 							    <div class="form-check form-check-inline">
-							    	<label for="inputCheckBoxHobbies">Hobbies</label>
+							    	<label for="inputTxtEmail">Hobbies</label>
 							    </div>
 							    <div class="form-check form-check-inline">
 								  <label class="form-check-label">
-								    <input class="form-check-input" type="checkbox" id="checkBoxMovies"  name="checkBoxHobbies" value="Movies"> Movies
+								    <input class="form-check-input" type="checkbox" id="checkBoxMovies" value="option1"> Movies
 								  </label>
 								</div>
 								<div class="form-check form-check-inline">
 								  <label class="form-check-label">
-								    <input class="form-check-input" type="checkbox" id="checkBoxOnlineGames" name="checkBoxHobbies" value="Online-Games"> Online-Games
+								    <input class="form-check-input" type="checkbox" id="checkBoxOnlineGames" value="option2"> Online-Games
 								  </label>
 								</div>
 								<div class="form-check form-check-inline disabled">
 								  <label class="form-check-label">
-								    <input class="form-check-input" type="checkbox" id="checkBoxTraveling" name="checkBoxHobbies" value="Traveling" disabled> Traveling
+								    <input class="form-check-input" type="checkbox" id="checkBoxTraveling" value="option3" disabled> Traveling
 								  </label>
 								</div>
 								
