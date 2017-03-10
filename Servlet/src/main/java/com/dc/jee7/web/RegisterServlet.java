@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(asyncSupported = false, name = "Register", urlPatterns = {"/Register"})
 public class RegisterServlet extends HttpServlet{
+	
 	private static final long serialVersionUID = 1L;
 	
 	public RegisterServlet(){
@@ -45,7 +46,6 @@ public class RegisterServlet extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
-		
 	}
 
 }
