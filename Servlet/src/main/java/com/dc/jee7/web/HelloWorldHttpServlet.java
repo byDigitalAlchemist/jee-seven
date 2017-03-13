@@ -3,10 +3,8 @@ package com.dc.jee7.web;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Enumeration;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.Set;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -73,7 +71,7 @@ public class HelloWorldHttpServlet extends HttpServlet{
         }
 		writer.println("</div>");
 		
-		
+		writer.close();
 		
 	}
 	

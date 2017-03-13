@@ -3,8 +3,11 @@ package com.dc.jee7.web;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Arrays;
+import java.util.Map;
+import java.util.Map.Entry;
 
 import javax.servlet.ServletException;
+import javax.servlet.ServletRegistration;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -21,6 +24,9 @@ public class RegisterServlet extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		
+		
 		
 		String userName 	=	request.getParameter("txtUserName");
 		String userPass 	=	request.getParameter("txtPass");
@@ -41,6 +47,17 @@ public class RegisterServlet extends HttpServlet{
 		writer.println("<p> Kids	 : "+ Arrays.toString(userKids) + "</p>");
 		writer.println("</div>");
 		
+		
+		Map<String, ? extends ServletRegistration> servletRegistrations = request.getServletContext().getServletRegistrations();
+
+		for (Entry<String, ? extends ServletRegistration> element : servletRegistrations.entrySet()) {
+		
+			writer.println("<p>key : " + element.getKey() + " Values : "+ element.getValue().getClassName() + "</p></br>");
+			
+			
+		}
+		
+		writer.close();
 	}
 	
 	@Override

@@ -10,7 +10,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebServlet;
 
 
-@WebServlet("/HelloWorld")
+@WebServlet(asyncSupported = false, name = "HelloWorld", urlPatterns = {"/HelloWorld"})
 public class HelloWorldGenericServlet extends GenericServlet{
 
 	private static final long serialVersionUID = 1L;
@@ -24,5 +24,6 @@ public class HelloWorldGenericServlet extends GenericServlet{
 	public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
 		PrintWriter writer = response.getWriter();
 		writer.println("Welcome to service method GenericServlet");
+		writer.close();
 	}
 }
